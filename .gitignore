@@ -1,4 +1,5 @@
 .env
+.idea/
 local*.json
 *.log
 node_modules

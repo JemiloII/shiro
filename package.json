@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Brian Jemilo II<jemiloii@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "chess.js": "jhlywa/chess.js",
-    "text2png": "^2.1.0"
+    "config": "3.1.0",
+    "discord.js": "11.4.2",
+    "sqlite3": "4.0.4",
+    "text2png": "2.1.0",
+    "winston": "2.4.2",
+    "winston-daily-rotate-file": "3.1.3"
   }
 }

@@ -1,0 +1,15 @@
+{
+  "discord": {
+    "token": "do-not-put-here"
+  },
+  "logger": {
+    "console": {
+      "level": "debug"
+    },
+    "file": {
+      "path": "./logs",
+      "level": "debug",
+      "name": "shiro.log"
+    }
+  }
+}
