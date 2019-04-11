@@ -13,7 +13,7 @@ const text2pngOpts = {
     bgColor: 'white',
     localFontPath: './assets/shiro.otf',
     localFontName: 'Shiro',
-    output: 'dataURL'
+    output: 'buffer'
 };
 const getChar = ({type, color, tile}) => type && color ? characters[`${type}${color}${tile}`] : characters[tile];
 
@@ -27,17 +27,15 @@ const boardToString = board => board.map(r => r.join('')).join('\n');
 console.log(characterBoard);
 const text = boardToString(characterBoard);
 
-const textBoard = text2png(text, text2pngOpts);
-const textRanks = text2png(legend.ranks.join('\n'), text2pngOpts);
+const chessBoard = text2png(text, text2pngOpts);
 
-console.log(textBoard);
-console.log(textRanks);
-console.log(text2png(' \n A B C D E F G H \n ', text2pngOpts));
+console.log(chessBoard);
 
 const dimension = fontSize * 9;
 new Jimp(dimension, dimension, async (error, image) => {
     try {
-        console.log(await image.getBase64Async('image/png'));
+        const board = await Jimp.read(chessBoard);
+        console.log(await board.getBase64Async('image/png'));
     } catch (e) {
         console.log('Caught Jimp Error:', e);
     }
