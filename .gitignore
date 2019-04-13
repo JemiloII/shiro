@@ -1,5 +1,6 @@
 .env
 .idea/
+*.sqlite
 local*.json
 *.log
 node_modules

@@ -1,4 +1,18 @@
 {
+  "database": {
+    "debug": false,
+    "client": "sqlite3",
+    "connection": {
+      "filename": "./chess.sqlite"
+    },
+    "migrations": {
+      "directory": "./knex/migrations"
+    },
+    "seeds": {
+      "directory": "./knex/seeds"
+    },
+    "useNullAsDefault": true
+  },
   "discord": {
     "token": "do-not-put-here"
   },
