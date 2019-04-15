@@ -2,12 +2,12 @@ exports.up = knex =>
     knex.schema
         .createTable('players', table => {
             table.string('id').primary();
-            table.integer('elo');
-            table.integer('win');
-            table.integer('draw');
-            table.integer('lose');
-            table.integer('total');
-            table.boolean('playing');
+            table.integer('elo').defaultTo(1200);
+            table.integer('win').defaultTo(0);
+            table.integer('draw').defaultTo(0);
+            table.integer('lose').defaultTo(0);
+            table.integer('total').defaultTo(0);
+            table.boolean('playing').defaultTo(false);
         })
         .createTable('games', table => {
             table.integer('id').primary();
