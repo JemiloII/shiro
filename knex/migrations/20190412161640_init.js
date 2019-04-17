@@ -11,8 +11,10 @@ exports.up = knex =>
         })
         .createTable('games', table => {
             table.integer('id').primary();
-            table.string('white').references('player.id');
-            table.string('black').references('player.id');
+            table.integer('guildId').notNullable();
+            table.integer('channelId').notNullable();
+            table.string('white').references('player.id').notNullable();
+            table.string('black').references('player.id').notNullable();
             table.text('fen');
             table.text('pgn');
             table.string('winner');
