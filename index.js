@@ -1,1 +1,1 @@
-require('./lib/discord/client');
+require('./lib/client');
