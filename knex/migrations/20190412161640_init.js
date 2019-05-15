@@ -19,6 +19,7 @@ exports.up = knex =>
             table.text('pgn');
             table.string('winner');
             table.string('reason');
+            table.boolean('active').defaultTo(true);
         });
 
 exports.down = knex =>
