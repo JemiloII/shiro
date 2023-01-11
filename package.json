@@ -13,7 +13,7 @@
     "config": "3.1.0",
     "discord.js": "11.4.2",
     "jimp": "0.6.1",
-    "knex": "0.19.5",
+    "knex": "2.4.0",
     "objection": "1.6.7",
     "sqlite3": "4.0.4",
     "stockfish": "10.0.0",
